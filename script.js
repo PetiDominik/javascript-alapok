@@ -5,11 +5,13 @@ function init() {
     //console.log("AsdASDASDASD")
 
 
-    document.querySelector("button").addEventListener("click", udv)
+
+    /* document.querySelector("button").addEventListener("click", udv)
     valtozok();
     elagazasok();
-    ciklusok();
-
+    ciklusok(); */
+    varHoisiting();
+    //letHoisiting();
 }
 
 function valtozok() {
@@ -90,9 +92,28 @@ function ciklusok() {
     }while (num <= 0);
 
 }
+//----------------------------------
+/*
+    var | funkción belül bárhol lehet használni.
+    let | csak az adaott blokkban
+*/
 
+function varHoisiting() {
+    /*
+    A változó deklarálása úgy viselkedik, mintha a hatókörének a tetején deklaráltam volna. 
+    indefined lesz az értéke
+    */
+    console.log(valt);
+    var valt = 2;
+}
 
-
+function letHoisiting() {
+    /*
+    errort dob
+    */
+    console.log(valt);
+    let valt = 1;
+}
 
 function udv() {
     alert("szeva");
